@@ -1,0 +1,262 @@
+/*RESET*/
+html,body,div,span,h1,h2,a,p,img,ul,li,form,label,legend,footer,header,menu,nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+/*CONDITIONS*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFCF5;
+}
+
+a,p,span,input,label,button,form,.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #131313;
+}
+
+a {
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background: #000;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 1310px;
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+.flx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dg {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+}
+
+.dn {
+    display: none;
+}
+
+/*HEADER*/
+header {
+    border-bottom: 1px solid #D4D1C766;
+    padding: 20px 0;
+}
+
+li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.nav .order {
+    display: none;
+}
+
+.logo {
+    background: url(../icon/logo.svg) no-repeat;
+    width: 140px;
+    height: 20px;
+}
+
+.basket,.open_menu {
+    background: url(../icon/basket.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.open_menu {
+    display: none;
+    background: url(../icon/menu.svg) no-repeat;
+    cursor: pointer;
+}
+
+.close_menu {
+    display: none;
+}
+
+.logo + div *:not(p) {
+    margin-left: 20px;
+}
+
+/*MAIN*/
+section {
+    position: relative;
+    padding: 126px 0;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 170px;
+    /* line-height: 136px; */
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+main p {
+    margin-bottom: 40px;
+    max-width: 520px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: calc(100%/2);
+    z-index: -1;
+    border-radius: 0 0 0 20px;
+    min-height: 950px;
+    max-width: calc(1920px - (1310px / 2));
+    object-fit: cover;
+    object-position: center;
+}
+
+/*FORM*/
+#modal_target_open {
+    display: none;
+}
+
+#modal_target_open:target {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 37, 37, 0.74);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+}
+
+form {
+    position: relative;
+    background: #fff;
+    padding: 60px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+form p {
+    font-size: 15px;
+    line-height: 20px;
+    color: #A9A9A9;
+    margin-bottom: 30px;
+}
+
+label:not(.checkbox) {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 6px 15px;
+}
+
+input[type="email"] {
+    padding: 15px 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #BDBDBD;
+}
+
+.checkbox {
+    margin-bottom: 40px;
+    justify-content: flex-start;
+}
+
+.checkbox input {
+    margin: 0 14px 0 0;
+}
+
+.checkbox span, .checkbox a {
+    color: #B3B3B3;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.checkbox a {
+    text-decoration: underline;
+}
+
+button.btn {
+    width: 100%;
+    padding: 16px 40px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.modal_target_close::before {
+    position: fixed;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.modal_target_close::after,
+.mobile_menu_open .close_menu {
+    position: absolute;
+    content: '';
+    top: 20px;
+    right: 20px;
+    background: url(../icon/cross.svg) no-repeat center;
+    background-color: #BDBDBD;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+}

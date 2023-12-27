@@ -1,0 +1,128 @@
+@media screen and (max-width: 360px) {
+
+    /*HEADER*/
+    header {
+        padding: 20px;
+    }
+
+    .dg {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    ul.flx {
+        display: none;
+    }
+
+    .open_menu {
+        display: inline-block;
+    }
+
+    .mobile_menu_open {
+        background: #fff;
+        border: none;
+    }
+
+    .mobile_menu_open .open_menu {
+        display: none;
+    }
+
+    .mobile_menu_open .dg {
+        grid-template: repeat(3, auto) / repeat(1, auto);
+        justify-content: start;
+        align-content: start;
+    }
+
+    .mobile_menu_open .nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #fff;
+        z-index: 10;
+        padding: 20px;
+    }
+
+    .mobile_menu_open ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        order: 1;
+        margin-top: 25px;
+    }
+
+    .mobile_menu_open li {
+        margin: 10px 5px;
+    }
+
+    .mobile_menu_open li > a {
+        font-size: 24px;
+        line-height: 30px;
+        text-decoration: none;
+    }
+
+    .mobile_menu_open .order {
+        display: inline-block;
+        margin-top: 40px;
+    }
+
+    .adres,
+    .mobile_menu_open .basket {
+        display: none;
+    }
+
+    .mobile_menu_open .close_menu {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .mobile_menu_open .close_menu:hover {
+        background-color: #131313;
+    }
+
+    /*MAIN*/
+    section {
+        padding: 0;
+    }
+
+    section.flx {
+        flex-direction: column;
+    }
+
+    section.flx>div {
+        padding: 60px 15px 35px;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Michroma', sans-serif;
+        font-size: 9vw;
+        line-height: 26px;
+        text-align: justify;
+    }
+
+    main p {
+        margin-bottom: 20px;
+        max-width: 100%;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    img {
+        position: static;
+        max-height: 100vh;
+        min-height: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    /*FORM*/
+    form {
+        padding: 75px 20px 20px;
+    }
+
+    h2,
+    p {
+        text-align: center;
+    }
+}
